@@ -1,0 +1,33 @@
+<div class="container" ng-app='myApp' ng-controller="formController">
+
+	<h1>Create a Poll</h1>
+
+	<div class="col-md-12">
+
+		<form ng-submit="submit()" class="form-horizontal"> <!--Begin Form-->
+
+
+				<label for="question" class="control-label"><h2>Question</h2></label>
+				<div class="form-group">
+				<div class="col-md-10 col-md-offset-1">
+				<input type="text" id="question" class="form-control" placeholder="Why is the skyblue?" ng-model="question">
+				</div>
+			</div>
+
+				<label for="options" class="control-label"><h2>Options <a class="btn btn-success" ng-click="addOption()"><span class="glyphicon glyphicon-plus"></span></a></h2></label>
+
+				<div class="form-group" ng-repeat="option in options">
+					<label for="$index" class="col-md-1 control-label"><a class="btn btn-danger" ng-click="removeOption($index)"><span class="glyphicon glyphicon-minus"></span></a></label>
+					<div class="col-md-10">
+					<input type="text" id="$index" class="form-control" placeholder="{{option.option}}" ng-model="option.option">
+					</div>
+
+
+				</div>
+
+			<input type="submit" class="btn btn-lg btn-primary"></input>
+		</form>
+
+	</div>
+
+</div>
