@@ -23,25 +23,21 @@
     "connect-mongo": "^0.8.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "connect-livereload": "~0.4.0",
     "grunt": "~0.4.4",
     "grunt-angular-templates": "^0.5.4",
     "grunt-autoprefixer": "~0.7.2",
     "grunt-babel": "~5.0.0",
     "grunt-build-control": "~0.4.0",
-=======
     "grunt": "~0.4.4",
     "grunt-autoprefixer": "~0.7.2",
     "grunt-wiredep": "~1.8.0",
->>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
     "grunt-concurrent": "~0.5.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-htmlmin": "~0.2.0",
-<<<<<<< HEAD
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-sass": "^0.7.3",
@@ -84,8 +80,7 @@
     "requirejs": "~2.1.11",
     "should": "~3.3.1",
     "supertest": "~0.11.0",
-    "time-grunt": "~0.3.1"
-=======
+    "time-grunt": "~0.3.1",
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "~0.4.0",
@@ -132,7 +127,6 @@
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "supertest": "~0.11.0",
     "should": "~3.3.1"
->>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
   },
   "engines": {
     "node": ">=0.10.0"
