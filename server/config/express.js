@@ -13,7 +13,10 @@ var methodOverride = require('method-override');
 var cookieParser = require('cookie-parser');
 var errorHandler = require('errorhandler');
 var path = require('path');
+<<<<<<< HEAD
 var flash = require('connect-flash');
+=======
+>>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
 var config = require('./environment');
 var passport = require('passport');
 
@@ -28,7 +31,10 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
+<<<<<<< HEAD
   app.use(flash());
+=======
+>>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
   app.use(passport.initialize());
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));

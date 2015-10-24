@@ -9,7 +9,10 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var express = require('express');
 var mongoose = require('mongoose');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
 var config = require('./config/environment');
 
 // Connect to database
@@ -24,7 +27,10 @@ if(config.seedDB) { require('./config/seed'); }
 
 // Setup server
 var app = express();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 766a59eebc28305e53a846d9b41a509ea3ba23de
 var server = require('http').createServer(app);
 require('./config/express')(app);
 require('./routes')(app);
