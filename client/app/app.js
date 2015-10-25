@@ -50,6 +50,9 @@ angular.module('votingappApp', [
         if (next.authenticate && !loggedIn) {
           event.preventDefault();
           $location.path('/login');
+        } else if (next.admin && !Auth.isAdmin()) {
+          event.preventDefault();
+          $location.path('/login');
         }
       });
     });

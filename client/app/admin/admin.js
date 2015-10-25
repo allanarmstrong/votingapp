@@ -5,6 +5,7 @@ angular.module('votingappApp')
     $routeProvider
       .when('/admin', {
         templateUrl: 'app/admin/admin.html',
-        controller: 'AdminCtrl'
+        controller: 'AdminCtrl',
+        admin: true
       });
   });

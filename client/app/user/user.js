@@ -3,9 +3,9 @@
 angular.module('votingappApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/polls/create', {
-        templateUrl: 'app/create/create.html',
-        controller: 'CreateCtrl',
+      .when('/user', {
+        templateUrl: 'app/user/user.html',
+        controller: 'UserCtrl',
         authenticate: true,
       });
   });

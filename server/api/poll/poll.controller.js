@@ -7,8 +7,8 @@ var Poll = require('./poll.model');
 exports.index = function(req, res) {
   Poll.find(function (err, polls) {
     if(err) { return handleError(res, err); }
-    //return res.status(200).json(polls);
-    return res.json({polls: polls, msg: 'Hello World'});
+    return res.status(200).json(polls);
+    //return res.json(polls);
   });
 };
 
@@ -20,6 +20,14 @@ exports.show = function(req, res) {
     return res.json(poll);
   });
 };
+
+//Gets the polls made by a particular user.
+  exports.showByUser  = function(req, res, next) {
+    Poll.find({userID: req.params.id}, function(err, polls) {
+      if (err) { return handleError(res, err); }
+      return res.status(200).json(polls);
+    })
+  }
 
 // Creates a new poll in the DB.
 exports.create = function(req, res) {

@@ -1,6 +1,4 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<div class="container">
-
 	<h1>Create a Poll</h1>
 
 	<div class="col-md-12">
@@ -20,7 +18,7 @@
 				<div class="form-group" ng-repeat="option in options">
 					<label for="$index" class="col-md-1 control-label"><a class="btn btn-danger" ng-click="removeOption($index)"><span class="glyphicon glyphicon-minus"></span></a></label>
 					<div class="col-md-10">
-					<input type="text" id="$index" class="form-control" placeholder="{{option.option}}" ng-model="option.option">
+						<input type="text" id="$index" class="form-control" placeholder="{{option.option}}" ng-model="option.option">
 					</div>
 
 
@@ -30,5 +28,3 @@
 		</form>
 
 	</div>
-
-</div>

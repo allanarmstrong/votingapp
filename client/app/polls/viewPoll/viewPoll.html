@@ -1,0 +1,10 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+	<h1>{{question}}</h1>
+	<form class="form-horizontal" ng-submit="vote()">
+		<div class="form-group" ng-repeat="question in options">
+			<input type="radio" ng-model="$parent.voteOption" value="{{$index}}">{{question.option}}
+		</div>
+		<input type="submit" class="btn btn-large btn-primary">
+	</form>
+</div>

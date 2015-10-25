@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('votingappApp')
-  .controller('CreateCtrl', function ($scope) {
+  .controller('CreateCtrl', function ($scope, $http, Auth) {
   	$scope.form = {
 		question: '',
-		options: [],
+		answers: [],
+		userID: Auth.getCurrentUser()._id
 	};
 
 	$scope.question = '';
@@ -13,8 +14,10 @@ angular.module('votingappApp')
 
 	$scope.submit = function() {
 		$scope.form.question = $scope.question;
-		$scope.form.options = $scope.options;
-		console.log($scope.form);
+		$scope.form.answers = $scope.options;
+		$http.post('/api/polls', $scope.form).success(function(poll) {
+			console.log(poll);
+		});
 	};
 
 	$scope.addOption = function() {
