@@ -23,6 +23,6 @@ angular.module('votingappApp')
     		console.log(poll);
     		$scope.voteOption = null;
     	});
-    	//$location.path('/results/' + $scope.poll._id);
+    	$location.path('/polls/results/' + $scope.poll._id);
     };
   });

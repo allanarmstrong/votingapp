@@ -1,6 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
+
 var Poll = require('./poll.model');
 
 // Get list of polls
@@ -62,6 +63,10 @@ exports.destroy = function(req, res) {
     });
   });
 };
+
+
+
+
 
 function handleError(res, err) {
   return res.status(500).send(err);

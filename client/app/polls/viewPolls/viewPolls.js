@@ -3,7 +3,7 @@
 angular.module('votingappApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/polls/view', {
+      .when('/polls', {
         templateUrl: 'app/polls/viewPolls/viewPolls.html',
         controller: 'ViewPollsCtrl'
     });

@@ -49,4 +49,32 @@ User.find({}).remove(function() {
   );
 });
 
-//Poll.find({}).remove(function() { console.log("Removed all the polls!") });
+Poll.find({}).remove(function() {
+  Poll.create({
+    question: 'Why is the sky blue?',
+    answers: [{
+      option: 'Einstein',
+      votes: 12,
+    }, {
+      option: 'Orange',
+      votes: 127,
+    }],
+  }, {
+    question: 'Are you okay?',
+    answers: [{
+      option: 'Yes',
+      votes: 2,
+    },{
+      option: 'No',
+      votes: 1,
+    }, {
+      option: 'Maybe',
+      votes: 13523,
+    }, {
+      option: 'I don\'t know',
+      votes: '12'
+    }]
+  }, function() {
+        console.log("Removed all the polls!") 
+  });
+});

@@ -1,6 +1,12 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
 <div class="col-md-12">
-	<div class="row" ng-repeat="poll in polls">
-	<a ng-href="polls/view/{{poll._id}}">{{poll.question}}</a>
+	<div class="row" ng-show="noPolls">
+		<h1>Whoops! There's no polls here.</h1>
+		<p>Why not <a href="/signup">Signup</a> and Create one?</p>
 	</div>
+	<div class="row" ng-repeat="poll in polls" ng-show="!noPolls">
+	<a ng-href="polls/view/{{poll._id}}">{{poll.question}}</a> | <a ng-href="polls/results/{{poll._id}}"> View Results</a>
+	</div>
+</div>
 </div>

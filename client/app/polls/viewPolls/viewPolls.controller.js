@@ -3,10 +3,15 @@
 angular.module('votingappApp')
   .controller('ViewPollsCtrl', function ($scope, $http, $location) {
     $http.get('/api/polls').success(function(data) {
-    	console.log(data);
-    	$scope.polls = data;
+    	//console.log(data);
+    	if (data.length > 0) {
+    		$scope.polls = data;
+    		$scope.noPolls = false;
+    	} else {
+    		$scope.noPolls = true;
+    	}
+
     }).error(function(data, status) {
-    	console.log(status, data);
     	$location.path('/polls/view');
     });
   });

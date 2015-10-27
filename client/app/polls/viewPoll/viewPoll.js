@@ -6,5 +6,5 @@ angular.module('votingappApp')
       .when('/polls/view/:pollID', {
         templateUrl: 'app/polls/viewPoll/viewPoll.html',
         controller: 'ViewPollCtrl'
-      });
+      })
   });
