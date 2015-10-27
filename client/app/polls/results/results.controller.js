@@ -15,7 +15,6 @@ angular.module('votingappApp')
         votes.push(n.votes);
      });
 
-      console.log('total:', votes);
       var x = d3.scale.linear()
       .domain([0, d3.max(votes)])
       .range([0, width]);

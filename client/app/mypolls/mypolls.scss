@@ -1,0 +1,10 @@
+.mypolls {
+
+	.col-md-4 {
+		border-bottom: 1px solid black;
+		&:nth-child(odd) {
+			border-right: 1px solid black;
+		}
+	}
+
+}

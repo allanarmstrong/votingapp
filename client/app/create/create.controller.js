@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('votingappApp')
-  .controller('CreateCtrl', function ($scope, $http, Auth) {
+  .controller('CreateCtrl', function ($scope, $http, Auth, $location) {
   	$scope.form = {
 		question: '',
 		answers: [],
@@ -16,7 +16,7 @@ angular.module('votingappApp')
 		$scope.form.question = $scope.question;
 		$scope.form.answers = $scope.options;
 		$http.post('/api/polls', $scope.form).success(function(poll) {
-			console.log(poll);
+			$location.path('/polls/view/' + poll._id);
 		});
 	};
 
