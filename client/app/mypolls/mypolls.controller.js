@@ -17,6 +17,16 @@ angular.module('votingappApp')
   		return sum;
   	};
 
+    $scope.deletePoll = function (pollID, idx) 
+      $http.delete('/api/polls/' + pollID).success(function(polls) {
+        $scope.polls = polls;
+        if (polls.length === 0) {
+          $scope.noPolls = true;
+        }
+      });
+
+    };
+
   	$http.get('/api/polls/by/' + currUser).success(function(data) {
   		$scope.polls = data;
   		if (data.length === 0) {

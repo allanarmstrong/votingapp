@@ -57,10 +57,18 @@ exports.destroy = function(req, res) {
   Poll.findById(req.params.id, function (err, poll) {
     if(err) { return handleError(res, err); }
     if(!poll) { return res.status(404).send('Not Found'); }
-    poll.remove(function(err) {
-      if(err) { return handleError(res, err); }
-      return res.status(204).send('No Content');
-    });
+    var ID = poll.userID;
+    if (req.user._id == poll.userID) {
+      poll.remove(function(err) {
+        if(err) { return handleError(res, err); }
+        Poll.find({userID: ID} , function(err, polls) {
+          if (err) { return handleError(res, err); }
+          res.status(200).json(polls);
+        });
+      });
+    } else {
+      return res.status(403).send('Forbidden');
+    }
   });
 };
 

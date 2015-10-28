@@ -1,0 +1,10 @@
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+.view-polls__row {
+		&:nth-child(even) {
+			.col-md-4 {
+				background-color: lighten(#000, 93.5%);
+				color: lighten($brand-primary, 20%);
+			}
+		}
+}

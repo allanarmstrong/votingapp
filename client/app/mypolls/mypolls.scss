@@ -2,9 +2,14 @@
 
 	.col-md-4 {
 		border-bottom: 1px solid black;
-		&:nth-child(odd) {
-			border-right: 1px solid black;
-		}
+	}
+
+	h1, small {
+		display: block;
+	}
+
+	.row {
+		margin-top: 3em;
 	}
 
 }
