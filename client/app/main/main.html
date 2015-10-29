@@ -10,10 +10,18 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="text-center" ng-hide="isLoggedIn">Click <a href="/signup">Here</a> to Get Started</h1>
-      <h2 class="text-center" ng-show="isLoggedIn">Welcome back, {{user}}</h2>
+      <div ng-hide="isLoggedIn">
+      <h1 class="text-center">Click <a href="/signup">Here</a> to Get Started</h1>
       <p class="text-center"> Or </p>
       <h2 class="text-center">View <a href="/polls">Current Polls</a></h2>
+      </div>
+      <div ng-show="isLoggedIn" class="text-center">
+          <h2 ng-show="isLoggedIn">Welcome Back, {{name}},</h2>
+          <h4>Why Don't you</h4>
+          <h3><a href="/polls/create">Create a new poll</a></h3>
+          <h4>Or</h4>
+          <h3><a href="/mypolls">View polls you've already created</a></h3>
+      </div>
     </div>
   </div>
 </div>

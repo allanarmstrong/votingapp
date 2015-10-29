@@ -19,7 +19,7 @@ angular.module('votingappApp')
       .domain([0, d3.max(votes)])
       .range([0, width]);
 
-      var chart = d3.select('#results')
+      var chart = d3.select('.results')
       .attr('width', width)
       .attr('height', barHeight * data.length);
 
