@@ -29,8 +29,8 @@ angular.module('votingappApp')
 
   	$http.get('/api/polls/by/' + currUser).success(function(data) {
   		$scope.polls = data;
-  		if (data.length === 0) {
-  		  	$scope.noPolls = true;
+  		if (data.length > 0) {
+  		  	$scope.noPolls = false;
   		}
   	});
   });
