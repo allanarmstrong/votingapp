@@ -1,9 +1,18 @@
 <div class="container">
 	<h1>{{question}}</h1>
+	<div class="col-md-12">
+	<div class="col-md-4">
 	<form class="form-horizontal" ng-submit="vote()">
+		<fieldset ng-disabled="hasVoted">
 		<div class="form-group" ng-repeat="question in options">
 			<input type="radio" ng-model="$parent.voteOption" value="{{$index}}"> {{question.option}}
 		</div>
 		<input type="submit" class="btn btn-large btn-primary">
+		</fieldset>
 	</form>
+	</div>
+	<div class="col-md-8" ng-show="showResults">
+		<svg class="results">
+		</svg>
+	</div>
 </div>

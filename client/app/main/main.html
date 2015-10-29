@@ -1,15 +1,17 @@
 <header class="hero-unit" id="banner">
   <div class="container">
-    <h1>The Poll Toll</h1>
+  <i class="fa fa-bar-chart fa-5x"></i>
+    <h1>The Poll Troll</h1>
     <p class="lead">Create simple easy to use polls!</p>
-    <i class="fa fa-bar-chart fa-5x"></i>
+    
   </div>
 </header>
 
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="text-center">Click <a href="/signup">Here</a> to Get Started</h1>
+      <h1 class="text-center" ng-hide="isLoggedIn">Click <a href="/signup">Here</a> to Get Started</h1>
+      <h1 class="text-center" ng-show="isLoggedIn">Welcome back, {{user}}</h1>
     </div>
   </div>
 </div>

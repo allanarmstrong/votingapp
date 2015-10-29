@@ -1,12 +1,12 @@
 <div class="container">
-<div class="col-md-8 col-md-offset-2" class="text-center">
-		<h1>All Currently Available User Polls</h1>
+<div class="col-md-12" class="text-center">
+		<h1 class="text-center">All Currently Available User Polls</h1>
 		<div class="row" ng-show="noPolls">
 			<h1>Whoops! There's no polls here.</h1>
 			<p>Why not <a href="/signup">Signup</a> and Create one?</p>
 		</div>
 		<div class="row view-polls__row text-center" ng-repeat="poll in polls" ng-show="!noPolls">
-			<div class="col-md-4">
+			<div class="col-md-4 col-md-offset-2">
 				<a ng-href="polls/view/{{poll._id}}">{{poll.question}}</a> 
 			</div>
 			<div class="col-md-4">

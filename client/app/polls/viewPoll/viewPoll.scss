@@ -1,0 +1,12 @@
+.results {
+	opacity: 1;
+	
+}
+
+.results.ng-hide-remove {
+	transition: opacity 3s;
+}
+
+.results.ng-hide {
+	opacity: 0;
+}
