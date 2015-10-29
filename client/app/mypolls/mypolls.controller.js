@@ -5,7 +5,7 @@ angular.module('votingappApp')
     
   	var currUser = Auth.getCurrentUser()._id;
   	$scope.polls = '';
-  	$scope.noPolls = false;
+  	$scope.noPolls = true;
 
   	$scope.addVotes = function(idx) {
   		var answers = $scope.polls[idx].answers;

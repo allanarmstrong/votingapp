@@ -21,6 +21,6 @@ module.exports = {
             'mongodb://localhost/votingapp'
   },
 
-  seedDB: true
+  //seedDB: true
   
 };

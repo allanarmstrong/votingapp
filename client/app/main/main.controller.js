@@ -5,7 +5,7 @@ angular.module('votingappApp')
     
     $scope.isLoggedIn = Auth.isLoggedIn();
     if ($scope.isLoggedIn){
-      $scope.user = Auth.getCurentUser()._name;
+      $scope.user = Auth.getCurentUser().name;
     }
 
   });
